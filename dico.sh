@@ -11,6 +11,7 @@
 #########################################
 
 path="/usr/share/dict"
+dico_name=""
 declare -i long #la longueur du mot cherché
 
 if [[ $# -eq 0 ]] ; then
@@ -32,5 +33,5 @@ for arg in "$@" ; do
     fi
 done
 # -n pour afficher le numéro de ligne correspondant
-grep -n "^$regex$" $path
+grep -n "^$regex$" $path/$dico_name
 exit 0
